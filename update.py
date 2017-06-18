@@ -25,6 +25,6 @@ if save == "y":
     parser.set("options", "fulscr", str(fulscr))
     parser.set("options", "level", str(level))
     parser.set("options", "points", str(points))
-    with open('spit-fires/res/options.ini', 'w') as configfile:
+    with open('spit-fire/res/options.ini', 'w') as configfile:
         parser.write(configfile)
 print("All up to date!")
