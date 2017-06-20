@@ -1,7 +1,7 @@
 import git
 from subprocess import call
 from configparser import SafeConfigParser
-
+import shutil
 
 y = "Yes"
 n = "No"
@@ -15,11 +15,7 @@ if firsttime == "n":
         fulscr = parser.get("options", "fulscr")
         level = parser.get("options", "level")
         points = parser.get("options", "points")
-    try:
-        call(["del","spit-fire/*.*"])
-        call(["del","spit-fire\*.*"])
-    except FileNotFoundError:
-        call(["rm","-rf", "-r", "spit-fire"])
+    shutil.rmtree("spit-fire")
 git.Git().clone("https://github.com/BananaBerryInc/spit-fire")
 if save == "y":
     parser.set("options", "fulscr", str(fulscr))
