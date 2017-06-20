@@ -28,3 +28,4 @@ if save == "y":
     with open('spit-fire/res/options.ini', 'w') as configfile:
         parser.write(configfile)
 print("All up to date!")
+exit = input("Press enter to exit")
