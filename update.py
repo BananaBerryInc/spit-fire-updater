@@ -23,5 +23,5 @@ if save == "y":
     parser.set("options", "points", str(points))
     with open('spit-fire/res/options.ini', 'w') as configfile:
         parser.write(configfile)
-print("All up to date!")
-exit = input("Press enter to exit")
+print("Your copy of Spit-Fire is now up-to-date!" )
+exit = input("Press enter to exit ")
